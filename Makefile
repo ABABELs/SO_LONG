@@ -6,7 +6,7 @@
 #    By: arthurabel <arthurabel@student.42.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/14 14:43:44 by arthurabel        #+#    #+#              #
-#    Updated: 2023/05/26 14:48:26 by arthurabel       ###   ########.fr        #
+#    Updated: 2023/05/26 16:43:39 by arthurabel       ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,7 +41,7 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	@cmake MLX42 -B MLX42/build
 	@cmake --build MLX42/build -j4
-	@make -C inc/libft/
+	# @make -C inc/libft/
 	@$(CC) -o $(NAME) $(OBJS) $(LIBFT_DIR) $(MLX42_DIR) $(MLX42_INC)
 
 clean:
