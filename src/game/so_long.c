@@ -6,7 +6,7 @@
 /*   By: arthurabel <arthurabel@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 14:44:27 by arthurabel        #+#    #+#             */
-/*   Updated: 2023/05/26 14:56:03 by arthurabel       ###   ########.fr       */
+/*   Updated: 2023/05/30 13:06:38 by arthurabel       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,6 @@ void	ft_hook(void *param)
 	str = ft_strjoin(" Score : ", ft_itoa(sl->player->score));
 	if (sl->game_on)
 		move(sl);
-	// else if (sl->player->health < 0 && sl->game_on == 1)
-	// 	losing_screen(sl);
 	if (sl->player->img_score == NULL)
 		sl->player->img_score = mlx_put_string(sl->mlx, str, 0, 0);
 	else
@@ -78,7 +76,6 @@ int	main(int argc, char **argv)
 		exit(1);
 	solong = init_solong();
 	solong->map->map = parsing(argv[1]);
-	print_char_map(solong->map->map);
 	if (solong->map->map == NULL)
 	{
 		free(solong->map);
@@ -87,6 +84,7 @@ int	main(int argc, char **argv)
 		free(solong);
 		exit(1);
 	}
+	print_char_map(solong->map->map);
 	checking(solong);
 	run(solong);
 	return (0);

@@ -6,13 +6,13 @@
 /*   By: arthurabel <arthurabel@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/05 14:36:41 by aabel             #+#    #+#             */
-/*   Updated: 2023/05/22 13:01:07 by arthurabel       ###   ########.fr       */
+/*   Updated: 2023/05/30 11:37:27 by arthurabel       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-size_t	ft_strlens(const char *str)
+int	ft_strlens(const char *str)
 {
 	int	i;
 

@@ -6,7 +6,7 @@
 /*   By: arthurabel <arthurabel@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/05 14:35:47 by aabel             #+#    #+#             */
-/*   Updated: 2023/05/22 12:52:20 by arthurabel       ###   ########.fr       */
+/*   Updated: 2023/05/30 11:36:59 by arthurabel       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@
 char	*get_next_line(int fd);
 int		ft_strchr_gnl(char *s, int c);
 void	*ft_calloc_gnl(size_t count, size_t size);
-size_t	ft_strlens(const char *str);
+int		ft_strlens(const char *str);
 char	*ft_strjoin_gnl(char *s1, char *s2, int j, int i);
 char	*read_file(int fd, char *buffer_static, char *buffer);
 char	*ft_oneline(char *buffer);

@@ -6,7 +6,7 @@
 /*   By: arthurabel <arthurabel@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 14:44:10 by arthurabel        #+#    #+#             */
-/*   Updated: 2023/05/26 15:45:36 by arthurabel       ###   ########.fr       */
+/*   Updated: 2023/05/30 11:25:02 by arthurabel       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -108,4 +108,12 @@ void		collectible(void *param);
 void		check_hitbox_c(t_solong *sl);
 void		collect(t_solong *sl, int i);
 int			count_spec_c(char **map, char type);
+int			map_collectible(char **map);
+int			coord_is_possible(char **map);
+int			**map_in_int(char **map);
+void		find_spawn(char **map, int *x, int *y);
+int			find_coord(char **map, int **int_map, int i);
+int			check_all(char **map, int **int_map);
+void		free_int_map(int **int_map, char **map);
+int			check_side(int **int_map, int x, int y);
 #endif
