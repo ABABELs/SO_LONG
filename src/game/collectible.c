@@ -6,7 +6,7 @@
 /*   By: arthurabel <arthurabel@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/26 14:35:35 by arthurabel        #+#    #+#             */
-/*   Updated: 2023/05/26 16:38:41 by arthurabel       ###   ########.fr       */
+/*   Updated: 2023/05/31 13:27:32 by arthurabel       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,15 +32,6 @@ void	collectible(void *param)
 				sl->collectible[i]->x, sl->collectible[i]->y);
 			sl->collectible[i]->is_collected = 0;
 		}
-        else if (nb_c < sl->player->nb_collec && sl->collectible[i]->type == 'W')
-        {
-            mlx_image_to_window(sl->mlx, sl->collectible[i]->img,
-                sl->collectible[i]->x, sl->collectible[i]->y);
-        }
-        else if (nb_c == sl->player->nb_collec && sl->collectible[i]->type == 'W')
-        {
-            mlx_delete_image(sl->mlx, sl->collectible[i]->img);
-        }
 		i++;
 	}
 }
@@ -77,7 +68,7 @@ t_collect	*init_c(t_solong *sl, int x, int y, char type)
 		collectible->img = mlx_texture_to_image(sl->mlx, sl->texture[5]);
 	collectible->x = x * T_S;
 	collectible->y = y * T_S;
-    if (type == 'W')
+	if (type == 'W')
 		collectible->img = mlx_texture_to_image(sl->mlx, sl->texture[7]);
 	collectible->x = x * T_S;
 	collectible->y = y * T_S;

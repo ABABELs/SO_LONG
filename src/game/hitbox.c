@@ -6,7 +6,7 @@
 /*   By: arthurabel <arthurabel@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/26 14:09:43 by arthurabel        #+#    #+#             */
-/*   Updated: 2023/05/26 15:00:00 by arthurabel       ###   ########.fr       */
+/*   Updated: 2023/05/31 12:43:48 by arthurabel       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	check_hitbox(t_solong *sl, int player_x, int player_y)
 	{
 		while (sl->map->map[y][x])
 		{
-			if (sl->map->map[y][x] == '1')
+			if (sl->map->map[y][x] == '1' || sl->map->map[y][x] == 'W')
 			{
 				if (player_x < (x * T_S + T_S)
 					&& (player_x + sl->player->width) > (x * T_S)

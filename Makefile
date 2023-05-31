@@ -6,7 +6,7 @@
 #    By: arthurabel <arthurabel@student.42.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/14 14:43:44 by arthurabel        #+#    #+#              #
-#    Updated: 2023/05/30 10:35:38 by arthurabel       ###   ########.fr        #
+#    Updated: 2023/05/30 14:40:25 by arthurabel       ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,6 +27,7 @@ SRC = src/game/so_long.c	src/game/init.c \
 							src/game/collectible.c \
 							src/game/collectible_bis.c \
 							src/parsing/checker_3.c \
+							src/game/water_door.c \
 
 OBJS = $(SRC:%.c=%.o)
 

@@ -6,7 +6,7 @@
 /*   By: arthurabel <arthurabel@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 14:42:27 by arthurabel        #+#    #+#             */
-/*   Updated: 2023/05/30 11:36:20 by arthurabel       ###   ########.fr       */
+/*   Updated: 2023/05/31 13:40:58 by arthurabel       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ t_solong	*init_solong(void)
 	sl->player = malloc(sizeof(t_player));
 	sl->mlx = NULL;
 	sl->texture = NULL;
-	sl->player->height = 60;
-	sl->player->width = 60;
+	sl->player->height = 55;
+	sl->player->width = 64;
 	sl->game_on = 1;
 	sl->prev_dt = 0;
 	sl->dt = 0;

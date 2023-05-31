@@ -6,7 +6,7 @@
 /*   By: arthurabel <arthurabel@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 10:34:57 by arthurabel        #+#    #+#             */
-/*   Updated: 2023/05/30 11:41:10 by arthurabel       ###   ########.fr       */
+/*   Updated: 2023/05/31 13:34:33 by arthurabel       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,8 @@ int	check_all(char **map, int **int_map)
 	{
 		while (map[x][y])
 		{
-			if (map[x][y] == 'C' || map[x][y] == 'E'|| map[x][y] == 'P' || map[x][y] == 'W')
+			if (map[x][y] == 'C' || map[x][y] == 'E'
+			|| map[x][y] == 'P' || map[x][y] == 'W')
 				if (int_map[x][y] == 0)
 					return (0);
 			y++;

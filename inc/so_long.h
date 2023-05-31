@@ -6,7 +6,7 @@
 /*   By: arthurabel <arthurabel@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 14:44:10 by arthurabel        #+#    #+#             */
-/*   Updated: 2023/05/30 11:25:02 by arthurabel       ###   ########.fr       */
+/*   Updated: 2023/05/31 13:24:46 by arthurabel       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ typedef struct s_solong
 	int				game_on;
 	double			dt;
 	double			prev_dt;
-}			        t_solong;
+}					t_solong;
 
 char		**parsing(char *map);
 t_solong	*init_solong(void);
@@ -116,4 +116,11 @@ int			find_coord(char **map, int **int_map, int i);
 int			check_all(char **map, int **int_map);
 void		free_int_map(int **int_map, char **map);
 int			check_side(int **int_map, int x, int y);
+void		water_door(void *param);
+void		change_w_to_0(t_solong *sl);
+void		go_up(t_solong *sl, int player_x, int player_y);
+void		go_down(t_solong *sl, int player_x, int player_y);
+void		go_left(t_solong *sl, int player_x, int player_y);
+void		go_right(t_solong *sl, int player_x, int player_y);
+
 #endif

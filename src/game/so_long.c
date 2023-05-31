@@ -6,7 +6,7 @@
 /*   By: arthurabel <arthurabel@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 14:44:27 by arthurabel        #+#    #+#             */
-/*   Updated: 2023/05/30 13:06:38 by arthurabel       ###   ########.fr       */
+/*   Updated: 2023/05/31 13:29:07 by arthurabel       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ void	run(t_solong *sl)
 		exit(EXIT_FAILURE);
 	init(sl);
 	mlx_loop_hook(sl->mlx, collectible, sl);
+	mlx_loop_hook(sl->mlx, water_door, sl);
 	mlx_loop_hook(sl->mlx, ft_hook, sl);
 	mlx_loop_hook(sl->mlx, delta_time, sl);
 	mlx_loop(sl->mlx);
@@ -57,8 +58,6 @@ void	delta_time(void *param)
 	sl->dt = current_time - sl->prev_dt;
 	sl->prev_dt = current_time;
 }
-
-
 
 void	init(t_solong *sl)
 {

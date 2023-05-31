@@ -6,7 +6,7 @@
 /*   By: arthurabel <arthurabel@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/23 13:29:32 by arthurabel        #+#    #+#             */
-/*   Updated: 2023/05/30 13:11:30 by arthurabel       ###   ########.fr       */
+/*   Updated: 2023/05/31 13:33:25 by arthurabel       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	checking(t_solong *sl)
 	map = sl->map->map;
 	if (check_map(map) == 0)
 		printf("Error\n");
-    else
+	else
 	{
 		sl->map->width = ft_strlen(map[0]);
 		sl->map->height = ft_array_len(map);
