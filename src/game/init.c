@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: arthurabel <arthurabel@student.42.fr>      +#+  +:+       +#+        */
+/*   By: aabel <aabel@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 14:42:27 by arthurabel        #+#    #+#             */
-/*   Updated: 2023/05/31 13:40:58 by arthurabel       ###   ########.fr       */
+/*   Updated: 2023/06/01 12:06:54 by aabel            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ t_solong	*init_solong(void)
 	sl->dt = 0;
 	sl->player->timer = 0;
 	sl->player->score = 0;
+	sl->player->nb_collec = 0;
 	texture_init(sl);
 	return (sl);
 }

@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: arthurabel <arthurabel@student.42.fr>      +#+  +:+       +#+         #
+#    By: aabel <aabel@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/14 14:43:44 by arthurabel        #+#    #+#              #
-#    Updated: 2023/05/30 14:40:25 by arthurabel       ###   ########.fr        #
+#    Updated: 2023/06/01 12:01:13 by aabel            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,7 +35,7 @@ FLAGS	= -Wall -Wextra -Werror
 CC		= gcc $(FLAGS)
 
 LIBFT_DIR = inc/libft/libft.a
-MLX42_INC = -lglfw -L"/opt/homebrew/Cellar/glfw/3.3.8/lib/"
+MLX42_INC = -lglfw -L"/Users/aabel/.brew/opt/glfw/lib/"
 MLX42_DIR = MLX42/build/libmlx42.a
 
 all: $(NAME)

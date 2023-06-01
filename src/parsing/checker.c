@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   checker.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: arthurabel <arthurabel@student.42.fr>      +#+  +:+       +#+        */
+/*   By: aabel <aabel@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/23 13:29:32 by arthurabel        #+#    #+#             */
-/*   Updated: 2023/05/31 13:33:25 by arthurabel       ###   ########.fr       */
+/*   Updated: 2023/06/01 13:36:56 by aabel            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ int	map_is_rectangle(char **map)
 			return (0);
 		i++;
 	}
-	if (width < height)
+	if (width == height)
 		return (0);
 	return (1);
 }
