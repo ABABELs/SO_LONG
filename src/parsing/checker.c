@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   checker.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aabel <aabel@student.42.fr>                +#+  +:+       +#+        */
+/*   By: arthurabel <arthurabel@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/23 13:29:32 by arthurabel        #+#    #+#             */
-/*   Updated: 2023/06/01 13:36:56 by aabel            ###   ########.fr       */
+/*   Updated: 2023/06/06 13:52:21 by arthurabel       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,8 +38,6 @@ int	check_map(char **map)
 						if (coord_is_possible(map) == 1)
 							return (1);
 	return (0);
-	if (map)
-		return (1);
 }
 
 int	map_is_rectangle(char **map)

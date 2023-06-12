@@ -6,7 +6,7 @@
 /*   By: arthurabel <arthurabel@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/23 13:24:18 by arthurabel        #+#    #+#             */
-/*   Updated: 2023/05/23 16:33:21 by arthurabel       ###   ########.fr       */
+/*   Updated: 2023/06/06 12:43:08 by arthurabel       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ void	free_texture(t_solong *sl)
 
 void	free_all(t_solong *sl)
 {
+	if (sl->collectible)
+		free_collectible(sl);
 	free_solong(sl);
 	free_texture(sl);
 }
@@ -54,4 +56,19 @@ void	free_map(t_solong *sl)
 	}
 	free(sl->map->map);
 	free(sl->map);
+}
+
+void	free_collectible(t_solong *sl)
+{
+	int	i;
+
+	i = 0;
+	while (sl->collectible[i] && sl->collectible)
+	{
+		if (sl->collectible[i]->img)
+			mlx_delete_image(sl->mlx, sl->collectible[i]->img);
+		free(sl->collectible[i]);
+		i++;
+	}
+	free(sl->collectible);
 }

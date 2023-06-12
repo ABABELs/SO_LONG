@@ -6,7 +6,7 @@
 /*   By: arthurabel <arthurabel@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 14:44:10 by arthurabel        #+#    #+#             */
-/*   Updated: 2023/05/31 13:24:46 by arthurabel       ###   ########.fr       */
+/*   Updated: 2023/06/06 12:42:26 by arthurabel       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -122,5 +122,6 @@ void		go_up(t_solong *sl, int player_x, int player_y);
 void		go_down(t_solong *sl, int player_x, int player_y);
 void		go_left(t_solong *sl, int player_x, int player_y);
 void		go_right(t_solong *sl, int player_x, int player_y);
+void		free_collectible(t_solong *sl);
 
 #endif

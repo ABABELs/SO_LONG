@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   so_long.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aabel <aabel@student.42.fr>                +#+  +:+       +#+        */
+/*   By: arthurabel <arthurabel@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 14:44:27 by arthurabel        #+#    #+#             */
-/*   Updated: 2023/06/01 13:19:07 by aabel            ###   ########.fr       */
+/*   Updated: 2023/06/06 14:56:34 by arthurabel       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	run(t_solong *sl)
 		exit(EXIT_FAILURE);
 	init(sl);
 	mlx_loop_hook(sl->mlx, collectible, sl);
-	mlx_loop_hook(sl->mlx, water_door, sl);
+	// mlx_loop_hook(sl->mlx, water_door, sl);
 	mlx_loop_hook(sl->mlx, ft_hook, sl);
 	mlx_loop_hook(sl->mlx, delta_time, sl);
 	mlx_loop(sl->mlx);
@@ -34,7 +34,8 @@ void	ft_hook(void *param)
 	char		*str;
 
 	sl = (t_solong *)param;
-	str = ft_strjoin(" Score : ", ft_itoa(sl->player->score));
+	str = ft_strjoin(" Move : ", ft_itoa(sl->player->score));
+	ft_printf("%s\n", str);
 	if (sl->game_on)
 		move(sl);
 	if (sl->player->img_score == NULL)
@@ -44,6 +45,7 @@ void	ft_hook(void *param)
 		mlx_delete_image(sl->mlx, sl->player->img_score);
 		sl->player->img_score = mlx_put_string(sl->mlx, str, 0, 0);
 		mlx_resize_image(sl->player->img_score, 200, 40);
+		free(str);
 	}
 	key_hook(sl);
 }
