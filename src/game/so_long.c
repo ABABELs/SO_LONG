@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   so_long.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: arthurabel <arthurabel@student.42.fr>      +#+  +:+       +#+        */
+/*   By: aabel <aabel@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 14:44:27 by arthurabel        #+#    #+#             */
-/*   Updated: 2023/06/06 14:56:34 by arthurabel       ###   ########.fr       */
+/*   Updated: 2023/06/13 12:05:35 by aabel            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ void	run(t_solong *sl)
 		exit(EXIT_FAILURE);
 	init(sl);
 	mlx_loop_hook(sl->mlx, collectible, sl);
-	// mlx_loop_hook(sl->mlx, water_door, sl);
 	mlx_loop_hook(sl->mlx, ft_hook, sl);
 	mlx_loop_hook(sl->mlx, delta_time, sl);
 	mlx_loop(sl->mlx);
@@ -33,7 +32,9 @@ void	ft_hook(void *param)
 	t_solong	*sl;
 	char		*str;
 
+	str = NULL;
 	sl = (t_solong *)param;
+	system("leaks so_long");
 	str = ft_strjoin(" Move : ", ft_itoa(sl->player->score));
 	ft_printf("%s\n", str);
 	if (sl->game_on)
@@ -88,5 +89,6 @@ int	main(int argc, char **argv)
 	print_char_map(solong->map->map);
 	checking(solong);
 	run(solong);
+	// system("leaks so_long");
 	return (0);
 }

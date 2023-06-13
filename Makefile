@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: arthurabel <arthurabel@student.42.fr>      +#+  +:+       +#+         #
+#    By: aabel <aabel@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/14 14:43:44 by arthurabel        #+#    #+#              #
-#    Updated: 2023/06/06 14:04:28 by arthurabel       ###   ########.fr        #
+#    Updated: 2023/06/13 11:37:35 by aabel            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,16 +27,15 @@ SRC = src/game/so_long.c	src/game/init.c \
 							src/game/collectible.c \
 							src/game/collectible_bis.c \
 							src/parsing/checker_3.c \
-							src/game/water_door.c \
 
 OBJS = $(SRC:%.c=%.o)
 
-FLAGS	= -Wall -Wextra -Werror	-g3 -fsanitize=address
+FLAGS	= -Wall -Wextra -Werror	
 CC		= gcc $(FLAGS)
 
 LIBFT_DIR = inc/libft/libft.a
-# MLX42_INC = -lglfw -L"/Users/aabel/.brew/opt/glfw/lib/"#
-MLX42_INC = -lglfw -L"/opt/homebrew/Cellar/glfw/3.3.8/lib/"
+MLX42_INC = -lglfw -L"/Users/aabel/.brew/opt/glfw/lib/"
+# MLX42_INC = -lglfw -L"/opt/homebrew/Cellar/glfw/3.3.8/lib/"
 MLX42_DIR = MLX42/build/libmlx42.a
 
 all: $(NAME)

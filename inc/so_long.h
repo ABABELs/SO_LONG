@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   so_long.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: arthurabel <arthurabel@student.42.fr>      +#+  +:+       +#+        */
+/*   By: aabel <aabel@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 14:44:10 by arthurabel        #+#    #+#             */
-/*   Updated: 2023/06/06 12:42:26 by arthurabel       ###   ########.fr       */
+/*   Updated: 2023/06/13 11:36:14 by aabel            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -116,12 +116,11 @@ int			find_coord(char **map, int **int_map, int i);
 int			check_all(char **map, int **int_map);
 void		free_int_map(int **int_map, char **map);
 int			check_side(int **int_map, int x, int y);
-void		water_door(void *param);
-void		change_w_to_0(t_solong *sl);
 void		go_up(t_solong *sl, int player_x, int player_y);
 void		go_down(t_solong *sl, int player_x, int player_y);
 void		go_left(t_solong *sl, int player_x, int player_y);
 void		go_right(t_solong *sl, int player_x, int player_y);
 void		free_collectible(t_solong *sl);
+char		*freeall(char **str);
 
 #endif

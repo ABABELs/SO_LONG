@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   collectible_bis.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: arthurabel <arthurabel@student.42.fr>      +#+  +:+       +#+        */
+/*   By: aabel <aabel@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/26 14:47:45 by arthurabel        #+#    #+#             */
-/*   Updated: 2023/05/31 13:28:28 by arthurabel       ###   ########.fr       */
+/*   Updated: 2023/06/13 11:31:32 by aabel            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	is_c(char type)
 {
-	if (type == 'C' || type == 'E' || type == 'W')
+	if (type == 'C' || type == 'E')
 		return (type);
 	else
 		return (-1);

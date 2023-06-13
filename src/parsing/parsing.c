@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parsing.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: arthurabel <arthurabel@student.42.fr>      +#+  +:+       +#+        */
+/*   By: aabel <aabel@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 13:38:00 by arthurabel        #+#    #+#             */
-/*   Updated: 2023/05/23 13:22:06 by arthurabel       ###   ########.fr       */
+/*   Updated: 2023/06/13 11:36:52 by aabel            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,7 @@ char	**add_line(char **array, char *line)
 		new_array[i] = ft_strdup(line);
 	new_array[++i] = NULL;
 	free(array);
+	freeall(&line);
 	return (new_array);
 }
 

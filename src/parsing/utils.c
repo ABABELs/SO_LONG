@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: arthurabel <arthurabel@student.42.fr>      +#+  +:+       +#+        */
+/*   By: aabel <aabel@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/23 13:18:36 by arthurabel        #+#    #+#             */
-/*   Updated: 2023/05/30 10:32:57 by arthurabel       ###   ########.fr       */
+/*   Updated: 2023/06/13 11:58:04 by aabel            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,4 +32,15 @@ int	ft_array_len(char **array)
 	while (array[i])
 		i++;
 	return (i);
+}
+
+char	*freeall(char **str)
+{
+	if (*str)
+	{
+		free(*str);
+		*str = 0;
+		return (*str);
+	}
+	return (NULL);
 }
