@@ -6,7 +6,7 @@
 /*   By: arthurabel <arthurabel@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/23 16:04:39 by arthurabel        #+#    #+#             */
-/*   Updated: 2023/05/30 13:32:57 by arthurabel       ###   ########.fr       */
+/*   Updated: 2023/06/14 14:58:08 by arthurabel       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ void	draw_map(t_solong *sl)
 	int			x;
 	int			y;
 
-	imgsol = mlx_texture_to_image(sl->mlx, sl->texture[4]);
-	img = mlx_texture_to_image(sl->mlx, sl->texture[3]);
+	imgsol = mlx_texture_to_image(sl->mlx, sl->texture[2]);
+	img = mlx_texture_to_image(sl->mlx, sl->texture[1]);
 	x = 0;
 	y = 0;
 	while (sl->map->map[y] > 0)
@@ -43,7 +43,7 @@ void	draw_player(t_solong *sl)
 	int			x;
 	int			y;
 
-	sl->player->img = mlx_texture_to_image(sl->mlx, sl->texture[1]);
+	sl->player->img = mlx_texture_to_image(sl->mlx, sl->texture[0]);
 	map = sl->map->map;
 	x = 0;
 	y = 0;

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aabel <aabel@student.42.fr>                +#+  +:+       +#+        */
+/*   By: arthurabel <arthurabel@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 13:32:18 by aabel             #+#    #+#             */
-/*   Updated: 2023/06/13 12:03:53 by aabel            ###   ########.fr       */
+/*   Updated: 2023/06/14 14:01:46 by arthurabel       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		chainjoin[i] = s1[i];
 	while (u < ft_strlen(s2))
 		chainjoin[i++] = s2[u++];
+	free((char *)s2);
 	chainjoin[i] = '\0';
 	return (chainjoin);
 }

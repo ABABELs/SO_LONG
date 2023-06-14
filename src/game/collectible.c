@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   collectible.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aabel <aabel@student.42.fr>                +#+  +:+       +#+        */
+/*   By: arthurabel <arthurabel@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/26 14:35:35 by arthurabel        #+#    #+#             */
-/*   Updated: 2023/06/13 11:31:52 by aabel            ###   ########.fr       */
+/*   Updated: 2023/06/14 14:54:16 by arthurabel       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,14 +66,14 @@ t_collect	*init_c(t_solong *sl, int x, int y, char type)
 	collectible = malloc(sizeof(t_collect));
 	if (type == 'C')
 	{
-		collectible->img = mlx_texture_to_image(sl->mlx, sl->texture[5]);
+		collectible->img = mlx_texture_to_image(sl->mlx, sl->texture[3]);
 		collectible->is_collected = 0;
 	}
 	collectible->x = x * T_S;
 	collectible->y = y * T_S;
 	if (type == 'E')
 	{
-		collectible->img = mlx_texture_to_image(sl->mlx, sl->texture[6]);
+		collectible->img = mlx_texture_to_image(sl->mlx, sl->texture[4]);
 		collectible->is_collected = -1;
 	}
 	collectible->type = type;

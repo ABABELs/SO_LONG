@@ -6,7 +6,7 @@
 #    By: arthurabel <arthurabel@student.42.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/14 14:43:44 by arthurabel        #+#    #+#              #
-#    Updated: 2023/06/14 10:28:22 by arthurabel       ###   ########.fr        #
+#    Updated: 2023/06/14 11:50:10 by arthurabel       ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,8 +30,7 @@ SRC = src/game/so_long.c	src/game/init.c \
 
 OBJS = $(SRC:%.c=%.o)
 
-FLAGS	= -Wall -Wextra -Werror -g3 -fsanitize=address
-CC		= gcc $(FLAGS)
+FLAGS	= -Wall -Wextra -Werror
 
 LIBFT_DIR = inc/libft/libft.a
 # MLX42_INC = -lglfw -L"/Users/aabel/.brew/opt/glfw/lib/"

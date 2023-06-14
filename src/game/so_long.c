@@ -6,7 +6,7 @@
 /*   By: arthurabel <arthurabel@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 14:44:27 by arthurabel        #+#    #+#             */
-/*   Updated: 2023/06/14 10:35:03 by arthurabel       ###   ########.fr       */
+/*   Updated: 2023/06/14 15:20:37 by arthurabel       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ void	run(t_solong *sl)
 	mlx_loop_hook(sl->mlx, ft_hook, sl);
 	mlx_loop_hook(sl->mlx, delta_time, sl);
 	mlx_loop(sl->mlx);
+	// system("leaks -list so_long");
 	free_all(sl);
 	mlx_terminate(sl->mlx);
 	free(sl);

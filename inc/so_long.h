@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   so_long.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aabel <aabel@student.42.fr>                +#+  +:+       +#+        */
+/*   By: arthurabel <arthurabel@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 14:44:10 by arthurabel        #+#    #+#             */
-/*   Updated: 2023/06/13 11:36:14 by aabel            ###   ########.fr       */
+/*   Updated: 2023/06/14 15:04:59 by arthurabel       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ typedef struct s_player
 	mlx_image_t	*img;
 	int			x;
 	int			y;
-	char		direction;
 	int			height;
 	int			width;
 	int			timer;
