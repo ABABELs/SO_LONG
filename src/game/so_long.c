@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   so_long.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aabel <aabel@student.42.fr>                +#+  +:+       +#+        */
+/*   By: arthurabel <arthurabel@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 14:44:27 by arthurabel        #+#    #+#             */
-/*   Updated: 2023/06/13 12:05:35 by aabel            ###   ########.fr       */
+/*   Updated: 2023/06/14 10:35:03 by arthurabel       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,13 +34,14 @@ void	ft_hook(void *param)
 
 	str = NULL;
 	sl = (t_solong *)param;
-	system("leaks so_long");
 	str = ft_strjoin(" Move : ", ft_itoa(sl->player->score));
 	ft_printf("%s\n", str);
 	if (sl->game_on)
 		move(sl);
 	if (sl->player->img_score == NULL)
+	{
 		sl->player->img_score = mlx_put_string(sl->mlx, str, 0, 0);
+	}
 	else
 	{
 		mlx_delete_image(sl->mlx, sl->player->img_score);
@@ -89,6 +90,6 @@ int	main(int argc, char **argv)
 	print_char_map(solong->map->map);
 	checking(solong);
 	run(solong);
-	// system("leaks so_long");
+	system("leaks so_long");
 	return (0);
 }

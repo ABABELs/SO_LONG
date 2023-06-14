@@ -6,7 +6,7 @@
 /*   By: arthurabel <arthurabel@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 10:38:14 by aabel             #+#    #+#             */
-/*   Updated: 2023/05/17 11:55:00 by arthurabel       ###   ########.fr       */
+/*   Updated: 2023/06/14 10:13:15 by arthurabel       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,9 @@ char	*ft_itoa(int n)
 	len = ft_len(n);
 	x = malloc(sizeof(char) * (len + 1));
 	if (!x)
+	{
 		return (NULL);
+	}
 	x[len--] = '\0';
 	if (n == 0)
 		x[0] = '0';
