@@ -6,7 +6,7 @@
 /*   By: aabel <aabel@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/23 13:29:32 by arthurabel        #+#    #+#             */
-/*   Updated: 2023/06/15 12:09:15 by aabel            ###   ########.fr       */
+/*   Updated: 2023/06/15 12:27:06 by aabel            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,7 @@ int	checking(t_solong *sl)
 
 	map = sl->map->map;
 	if (check_map(map) == 0)
-	{
-		printf("Error\n");
 		return (0);
-	}
 	else
 	{
 		sl->map->width = ft_strlen(map[0]);
@@ -41,6 +38,19 @@ int	check_map(char **map)
 					if (map_collectible(map) == 1)
 						if (coord_is_possible(map) == 1)
 							return (1);
+	ft_printf("Error: ");
+	if (map_is_rectangle(map) == 0)
+		ft_printf("Map is not a rectangle\n");
+	else if (player_spawn(map) == 0)
+		ft_printf("Map has no player\n");
+	else if (map_is_closed(map) == 0)
+		ft_printf("Map is not closed\n");
+	else if (map_exit(map) == 0)
+		ft_printf("Map has no exit\n");
+	else if (map_collectible(map) == 0)
+		ft_printf("Map has no collectible\n");
+	else if (coord_is_possible(map) == 0)
+		ft_printf("Map has invalid characters\n");
 	return (0);
 }
 
