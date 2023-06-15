@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   so_long.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: arthurabel <arthurabel@student.42.fr>      +#+  +:+       +#+        */
+/*   By: aabel <aabel@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 14:44:10 by arthurabel        #+#    #+#             */
-/*   Updated: 2023/06/14 15:04:59 by arthurabel       ###   ########.fr       */
+/*   Updated: 2023/06/15 12:08:34 by aabel            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,7 +78,7 @@ int			selected_fd(char *map);
 char		**add_line(char **array, char *line);
 void		print_char_map(char **map);
 void		free_texture(t_solong *sl);
-void		checking(t_solong *sl);
+int			checking(t_solong *sl);
 void		run(t_solong *sl);
 void		texture_init(t_solong *sl);
 void		init(t_solong *sl);

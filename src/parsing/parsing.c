@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parsing.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: arthurabel <arthurabel@student.42.fr>      +#+  +:+       +#+        */
+/*   By: aabel <aabel@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 13:38:00 by arthurabel        #+#    #+#             */
-/*   Updated: 2023/06/14 13:59:34 by arthurabel       ###   ########.fr       */
+/*   Updated: 2023/06/15 11:07:44 by aabel            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,11 +34,10 @@ char	**add_line(char **array, char *line)
 	new_array = malloc(sizeof(char *) * (i + 2));
 	if (!new_array)
 		return (NULL);
-	i = 0;
-	while (i < len)
+	i = -1;
+	while (++i < len)
 	{
 		new_array[i] = array[i];
-		i++;
 	}
 	if (line[ft_strlen(line) - 1] == '\n')
 		new_array[i] = ft_substr(line, 0, ft_strlen(line) - 1);

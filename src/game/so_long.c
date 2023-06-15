@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   so_long.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: arthurabel <arthurabel@student.42.fr>      +#+  +:+       +#+        */
+/*   By: aabel <aabel@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 14:44:27 by arthurabel        #+#    #+#             */
-/*   Updated: 2023/06/14 15:20:37 by arthurabel       ###   ########.fr       */
+/*   Updated: 2023/06/15 12:11:23 by aabel            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ void	run(t_solong *sl)
 	mlx_loop_hook(sl->mlx, ft_hook, sl);
 	mlx_loop_hook(sl->mlx, delta_time, sl);
 	mlx_loop(sl->mlx);
-	// system("leaks -list so_long");
 	free_all(sl);
 	mlx_terminate(sl->mlx);
 	free(sl);
@@ -89,8 +88,14 @@ int	main(int argc, char **argv)
 		exit(1);
 	}
 	print_char_map(solong->map->map);
-	checking(solong);
+	if (checking(solong) == 0)
+	{
+		free(solong->map);
+		free(solong->player);
+		free_texture(solong);
+		free(solong);
+		exit(1);
+	}
 	run(solong);
-	system("leaks so_long");
 	return (0);
 }

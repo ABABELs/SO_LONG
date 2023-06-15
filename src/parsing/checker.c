@@ -3,28 +3,32 @@
 /*                                                        :::      ::::::::   */
 /*   checker.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: arthurabel <arthurabel@student.42.fr>      +#+  +:+       +#+        */
+/*   By: aabel <aabel@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/23 13:29:32 by arthurabel        #+#    #+#             */
-/*   Updated: 2023/06/06 13:52:21 by arthurabel       ###   ########.fr       */
+/*   Updated: 2023/06/15 12:09:15 by aabel            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../inc/so_long.h"
 
-void	checking(t_solong *sl)
+int	checking(t_solong *sl)
 {
 	char	**map;
 
 	map = sl->map->map;
 	if (check_map(map) == 0)
+	{
 		printf("Error\n");
+		return (0);
+	}
 	else
 	{
 		sl->map->width = ft_strlen(map[0]);
 		sl->map->height = ft_array_len(map);
 		sl->map->height_px = sl->map->height * T_S;
 		sl->map->width_px = sl->map->width * T_S;
+		return (1);
 	}
 }
 
